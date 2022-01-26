@@ -4,5 +4,5 @@ for(let i=0;i<=30;i++){
     // }else{
     //     console.log(i+" is odd.");
     // }
-    console.log((i%2==0)?(i+" even"):(i+" odd"));
+    console.log((i%2)?(i+" even"):(i+" odd"));
 }
