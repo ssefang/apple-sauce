@@ -1,4 +1,4 @@
-/* to test how to use github*/
+
 <!doctype html>
 <html lang="en">
 
@@ -18,16 +18,16 @@
 <body>
   <main class="container">
     <h1 class="text-center">Who Run Fast</h1>
-    <h3 class="text-center">Every player throw dice and move to corresponding location,who get 100 is the winner</h3>
+    <h3 class="text-center">Every player throw dice and move to corresponding location,who get 50 is the winner</h3>
     <section class="row top">
       <div class="col-sm-6 col-md-6 text-center">
         <div class="thumbnail">
 
           <div class="caption">
-            <button type="button" class="btn btn-warning">Start</button>
+            <button type="button" class="btn btn-warning" id="start">Start</button>
             <h3>Player1 Step</h3>
-            <p>100</p>
-            <button type="button" class="btn btn-primary">Click dice</button>
+            <p id="p1Location">50</p>
+            <button type="button" class="btn btn-primary" id="p1Click">Click dice</button>
           </div>
         </div>
       </div>
@@ -35,17 +35,17 @@
         <div class="thumbnail">
 
           <div class="caption">
-            <button type="button" class="btn btn-warning">Restart</button>
+            <button type="button" class="btn btn-warning" id="restart">Restart</button>
             <h3>Player2 Step</h3>
-            <p>100</p>
-            <button type="button" class="btn btn-primary">Click dice</button>
+            <p id="p2Location">50</p>
+            <button type="button" class="btn btn-primary" id="p2Click">Click dice</button>
           </div>
         </div>
       </div>
     </section>
     <section class="row botton">
-      <h3 class="text-center">Result</h3>
-      <h4 class="text-center">Round X</h4>
+      <h3 class="text-center" >Result</h3>
+      <h4 class="text-center" id="currentRound">Round X</h4>
       <div id="result"></div>
       
     </section>
