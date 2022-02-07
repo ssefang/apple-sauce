@@ -29,7 +29,7 @@ function setupGame(){
 function player1(){
 // restart button disable false
     document.getElementById('restart').disabled = false
-    document.getElementById('restart').style.display = block
+    document.getElementById('restart').style.display = "block"
 // button1 disable false
     document.getElementById('p1Click').disabled = false
 // button2 disable true
