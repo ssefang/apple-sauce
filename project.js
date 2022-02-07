@@ -3,8 +3,11 @@
 window.addEventListener('load', setupGame)
 
 //create elements
-var randomNumber
+var randomNumber1
+var randomNumber2
 var countTries
+var player1Number = 0
+var player2Number = 0
 // var isFlag = true
 
 
@@ -27,6 +30,8 @@ function setupGame(){
 
 
 function player1(){
+//  random number
+    randomNumber1 = Math.floor(Math.random()*6 + 1)
 // restart button disable false
     document.getElementById('restart').disabled = false
     document.getElementById('restart').style.display = "block"
@@ -38,12 +43,10 @@ function player1(){
         countTries ++
     document.getElementById('currentRound').innerText = "Round " + countTries    
 // play dice  (if == 100 or > 100)
-    let player1Number = 0
-    if(player1Number <100){
-        player1Number = player1Number + randomNumber
-    }else if (player1Number > 100){
-        player1Number = 200- player1Number
-    }else{
+    player1Number += randomNumber1    
+    if(player1Number > 20){
+        player1Number = 40 - player1Number
+    }else if (player1Number == 20){
         document.getElementById('p1Click').disabled = true
         document.getElementById('p2Click').disabled = true
         document.getElementById('restart').disabled = false
@@ -51,22 +54,21 @@ function player1(){
     }
 // and show the step
     document.getElementById('p1Location').innerText = player1Number
-
-    player2()
-}
-
-function player2(){
 // button1 disable false
     document.getElementById('p1Click').disabled = true
 // button2 disable true
     document.getElementById('p2Click').disabled = false
+
+}
+
+function player2(){
+// random number
+        randomNumber2 = Math.floor(Math.random()*6 + 1)
 // play dice
-    let player2Number = 0
-        if(player2Number <100){
-            player2Number = player2Number + randomNumber
-        }else if (player2Number > 100){
-            player2Number = 200- player2Number
-        }else{
+        player2Number += randomNumber2
+        if (player2Number > 20){
+            player2Number = 40- player2Number
+        }else if(player2Number == 20){
             document.getElementById('p1Click').disabled = true
             document.getElementById('p2Click').disabled = true
             document.getElementById('restart').disabled = false
@@ -74,22 +76,22 @@ function player2(){
         }
 // and show the step
     document.getElementById('p2Location').innerText = player2Number  
-
-    player1()
+// button1 disable false
+    document.getElementById('p1Click').disabled = false
+// button2 disable true
+    document.getElementById('p2Click').disabled = true
 }
 function initializeGame(){
 // 1. clear the result
     document.getElementById('result').innerText = ""
 // 3. clear the step
-    document.getElementById('p2Location').innerText = "0"
+    document.getElementById('p1Location').innerText = "0"
     document.getElementById('p2Location').innerText = "0"
 // 4. player2 button disable
     document.getElementById('p2Click').disabled = true
-// 5. random number
-    randomNumber = Math.floor(Math.random()*6 + 1)
-// 6. round number
+// 5. round number
     countTries = 0
-// 7.restart button disable
+// 6.restart button disable
     document.getElementById('restart').disabled = true
 }
 
