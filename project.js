@@ -20,7 +20,7 @@ function setupGame(){
 // button3 onclick function initializeGame
     document.getElementById('restart').onclick = initializeGame
     document.getElementById('restart').disabled = true
-    document.getElementById('restart').style.display = none
+    document.getElementById('restart').style.display = "none"
 //2. Initialize a new game by calling the initializeGame fumction
     initializeGame()
 }
