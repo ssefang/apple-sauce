@@ -36,7 +36,7 @@ function player1(){
     document.getElementById('p2Click').disabled = true
 // change the round
         countTries ++
-    document.getElementById('currentRound').innerText = "Round " + randomNumber    
+    document.getElementById('currentRound').innerText = "Round " + countTries    
 // play dice  (if == 100 or > 100)
     let player1Number = 0
     if(player1Number <100){
@@ -51,6 +51,8 @@ function player1(){
     }
 // and show the step
     document.getElementById('p1Location').innerText = player1Number
+
+    player2()
 }
 
 function player2(){
@@ -72,6 +74,8 @@ function player2(){
         }
 // and show the step
     document.getElementById('p2Location').innerText = player2Number  
+
+    player1()
 }
 function initializeGame(){
 // 1. clear the result
