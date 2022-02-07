@@ -16,7 +16,7 @@ function start(){
     document.getElementById("p2Click").style.visibility="hidden"
     document.getElementById('start').onclick =setupGame
 }
-
+document.getElementById('restart').onclick = initializeGame
 
 function setupGame(){
 // 1. add elements 
@@ -28,7 +28,7 @@ function setupGame(){
     document.getElementById('p2Click').onclick = player2
     document.getElementById('p2Click').disabled = true
 // button3 onclick function initializeGame
-    document.getElementById('restart').onclick = initializeGame
+    // document.getElementById('restart').onclick = initializeGame
     // document.getElementById('restart').disabled = true
     // document.getElementById('restart').style.display = "none"
 //2. Initialize a new game by calling the initializeGame fumction
@@ -77,6 +77,9 @@ function player1(){
 }
 
 function player2(){
+    if(document.getElementById('restart').onclick==true){
+        setupGame
+    }else{
 // random number
         randomNumber2 = Math.floor(Math.random()*6 + 1)
         document.getElementById('p2result').innerText = "play2 roll the dice and get "+randomNumber2
@@ -101,6 +104,8 @@ function player2(){
 // button2 disable true
     document.getElementById('p2Click').disabled = true
 }
+}
+
 function initializeGame(){
 // 1. clear the result
     document.getElementById('p1result').innerText = ""
@@ -113,11 +118,15 @@ function initializeGame(){
     // document.getElementById('p2Click').disabled = true
 // 5. round number
     countTries = 0
-    
+    document.getElementById('currentRound').innerText = "Round " + countTries    
+
 player1Number = 0
 player2Number = 0
 // 6.restart button disable
     // document.getElementById('restart').disabled = true
+    document.getElementById('p1Click').disabled = false
+
+    document.getElementById('p2Click').disabled = true
     document.getElementById("p1Click").style.visibility="visible"
     document.getElementById("p2Click").style.visibility="visible"
 }
