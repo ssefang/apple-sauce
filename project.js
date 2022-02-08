@@ -70,13 +70,13 @@ function player1(){
 
         document.getElementById('restart').disabled = false
         document.getElementById('p1result').innerText = "play1 roll the dice and get "+randomNumber1+" Player1 is the winner"
-        
+        alert("CONGRATULATIONS, PLAYER1 IS THE WINNER!!")
     }
 // and show the step
     document.getElementById('p1Location').innerText = player1Number
-    let progressNumber = player1Number*2
-    document.getElementById('p1Location').ariaValueNow = progressNumber
-    document.getElementById('p1Location').style.width = progressNumber + "%"
+    let progressNumber1 = player1Number*2
+    document.getElementById('p1Location').ariaValueNow = progressNumber1
+    document.getElementById('p1Location').style.width = progressNumber1 + "%"
 // button1 disable false
     document.getElementById('p1Click').disabled = true
 // button2 disable true
@@ -104,9 +104,13 @@ function player2(){
             document.getElementById("p2Click").style.visibility="hidden"
             document.getElementById('restart').disabled = false
             document.getElementById('p2result').innerText = "play2 roll the dice and get "+randomNumber2+" Player2 is the winner"
+            alert("CONGRATULATIONS, PLAYER2 IS THE WINNER!!")
         }
 // and show the step
-    document.getElementById('p2Location').innerText = player2Number  
+    document.getElementById('p2Location').innerText = player2Number
+    let progressNumber2 = player2Number*2
+    document.getElementById('p2Location').ariaValueNow = progressNumber2
+    document.getElementById('p2Location').style.width = progressNumber2 + "%"  
 // button1 disable false
     document.getElementById('p1Click').disabled = false
 // button2 disable true
@@ -142,4 +146,4 @@ player2Number = 0
 
 // first prompt player1's  and player2's name
 // promt the instruction of the game
-// make the step table
+// which player win there's a prompt
