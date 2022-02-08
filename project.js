@@ -74,8 +74,8 @@ function player1(){
     }
 // and show the step
     document.getElementById('p1Location').innerText = player1Number
-    document.getElementById('p1Location').ariaValueNow = player1Number*2
-    document.getElementById('p1Location').style.width = (player1Number*2)%
+    document.getElementById('p1Location').ariaValueNow = "player1Number*2"
+    document.getElementById('p1Location').style.width = "(player1Number*2)%"
 // button1 disable false
     document.getElementById('p1Click').disabled = true
 // button2 disable true
