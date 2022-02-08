@@ -74,6 +74,8 @@ function player1(){
     }
 // and show the step
     document.getElementById('p1Location').innerText = player1Number
+    document.getElementById('p1Location').ariaValueNow = player1Number*2
+    document.getElementById('p1Location').style.width = (player1Number*2)%
 // button1 disable false
     document.getElementById('p1Click').disabled = true
 // button2 disable true
@@ -138,6 +140,5 @@ player2Number = 0
 
 
 // first prompt player1's  and player2's name
+// promt the instruction of the game
 // make the step table
-// the button start and restart just need one ?
-// each round output the winner and loser
