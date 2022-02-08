@@ -18,19 +18,22 @@
 
 <body id="success">
   <main class="container">
-    <h1 class="text-center">Who Run Fast</h1>
-    <h3 class="text-center">Every player throw dice and move to corresponding location,who get 50 is the winner</h3>
+    <h1 class="text-center">Who Runs Fast</h1>
+    <h2 class="text-center">Roll a Dice! Whoever reaches 20 first is the winner.</h3>
     <section class="row top">
       <div class="col-sm-6 col-md-6 text-center">
         <div class="thumbnail">
           <div class="caption">
             <button type="button" class="btn btn-warning" id="start">Start</button>
-            <h3>Player1 Step</h3>
+            <div>
+              <img src="images/tom.jpg" />
+              <h3>Player1  Tom</h3>
+            </div>  
             <div class="progress">
               <div id="p1Location" class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%">0</div>
             </div>
             <br>
-            <button type="button" class="btn btn-primary" id="p1Click">Click dice</button>
+            <button type="button" class="btn btn-primary" id="p1Click">Roll dice</button>
           </div>
         </div>
       </div>
@@ -38,12 +41,15 @@
         <div class="thumbnail">
           <div class="caption">
             <button type="button" class="btn btn-warning" id="restart">Restart</button>
-            <h3>Player2 Step</h3>
+            <div> 
+              <img src="images/jerry.jpg" />
+              <h3>Player2 Jerry</h3>
+            </div>
             <div class="progress">
               <div id="p2Location" class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%">0</div>
             </div>
             <br>
-            <button type="button" class="btn btn-primary" id="p2Click">Click dice</button>
+            <button type="button" class="btn btn-primary" id="p2Click">Roll dice</button>
           </div>
         </div>
       </div>
