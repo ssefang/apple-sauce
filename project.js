@@ -142,6 +142,15 @@ player2Number = 0
     document.getElementById('p2Click').disabled = true
     document.getElementById("p1Click").style.visibility="visible"
     document.getElementById("p2Click").style.visibility="visible"
+// 7. initialize the 2 progress bars
+    document.getElementById('p1Location').innerText = 0
+    let progressNumber1 = player1Number*2
+    document.getElementById('p1Location').ariaValueNow = 0
+    document.getElementById('p1Location').style.width = "0%"
+    document.getElementById('p2Location').innerText = 0
+    let progressNumber1 = player1Number*2
+    document.getElementById('p2Location').ariaValueNow = 0
+    document.getElementById('p2Location').style.width = "0%"    
 }
 
 
