@@ -15,6 +15,7 @@ function start(){
     document.getElementById("p1Click").style.visibility="hidden"
     document.getElementById("p2Click").style.visibility="hidden"
     document.getElementById('start').onclick =setupGame
+    document.getElementById('restart').disabled = true
 }
 document.getElementById('restart').onclick = initializeGame
 
@@ -27,6 +28,8 @@ function setupGame(){
 // button2 onclick function player2
     document.getElementById('p2Click').onclick = player2
     document.getElementById('p2Click').disabled = true
+    
+
 // button3 onclick function initializeGame
     // document.getElementById('restart').onclick = initializeGame
     // document.getElementById('restart').disabled = true
@@ -37,6 +40,8 @@ function setupGame(){
 
 
 function player1(){
+    document.getElementById('start').disabled = true
+    document.getElementById('restart').disabled = false
 //  random number
     randomNumber1 = Math.floor(Math.random()*6 + 1)
     document.getElementById('p1result').innerText = "play1 roll the dice and get "+randomNumber1  
