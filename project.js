@@ -12,6 +12,7 @@ var player2Number = 0
 
 
 function start(){
+    alert("game instructions")
     document.getElementById("p1Click").style.visibility="hidden"
     document.getElementById("p2Click").style.visibility="hidden"
     document.getElementById('start').onclick =setupGame
