@@ -1,6 +1,6 @@
 
 .container {
-    min-height: 900px;
+    min-height: 1100px;
     width: 1000px;
     padding-bottom: 1px;
     margin: 100px auto;
@@ -68,9 +68,10 @@ img {
 
 p{
     font-family: 'Roboto';
-    text-align: center;
     color: #57523E;
-    font-size: 50px;
+    font-size: 20px;
+    text-align: left;
+    margin-left: 30px;
 }
 
 h2 {
