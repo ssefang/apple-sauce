@@ -11,7 +11,6 @@ var player1Number = 0
 var player2Number = 0
 
 function start(){
-    alert("game instructions")
     document.getElementById("p1Click").style.visibility="hidden"
     document.getElementById("p2Click").style.visibility="hidden"
     document.getElementById('start').onclick =setupGame
@@ -84,7 +83,6 @@ function player2(){
             document.getElementById("p2Click").style.visibility="hidden"
             document.getElementById('restart').disabled = false
             document.getElementById('p2result').innerText = "play2 roll the dice and get "+randomNumber2+" Player2 is the winner"
-            alert("CONGRATULATIONS, PLAYER2 IS THE WINNER!!")
         }
 // and show the step
     document.getElementById('p2Location').innerText = player2Number
