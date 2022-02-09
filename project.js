@@ -50,7 +50,7 @@ function player1(){
         document.getElementById("p1Click").style.visibility="hidden"
         document.getElementById("p2Click").style.visibility="hidden"
         document.getElementById('restart').disabled = false
-        document.getElementById('p1result').innerText = "play1 roll the dice and get "+randomNumber1+" Player1 is the winner"
+        document.getElementById('p1result').innerText = "play1 roll the dice and get "+randomNumber1+",he got 20, Player1 is the winner"
     }
 // and show the step
     document.getElementById('p1Location').innerText = player1Number
@@ -81,7 +81,7 @@ function player2(){
             document.getElementById("p1Click").style.visibility="hidden"
             document.getElementById("p2Click").style.visibility="hidden"
             document.getElementById('restart').disabled = false
-            document.getElementById('p2result').innerText = "play2 roll the dice and get "+randomNumber2+" Player2 is the winner"
+            document.getElementById('p2result').innerText = "play2 roll the dice and get "+randomNumber2+",he got 20, Player2 is the winner"
         }
 // and show the step
     document.getElementById('p2Location').innerText = player2Number

@@ -107,3 +107,11 @@ h4 {
 #p1result,#p2result{
     font-size: 24px;
 }
+
+#p1result{
+    color: #7a2101;
+}
+
+#p2result{
+    color: #034977;
+}
