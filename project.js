@@ -55,7 +55,7 @@ function player1(){
     }
 // and show the step
     document.getElementById('p1Location').innerText = player1Number
-    let progressNumber1 = player1Number*2
+    let progressNumber1 = player1Number*5
     document.getElementById('p1Location').ariaValueNow = progressNumber1
     document.getElementById('p1Location').style.width = progressNumber1 + "%"
 // button1 disable false
@@ -86,7 +86,7 @@ function player2(){
         }
 // and show the step
     document.getElementById('p2Location').innerText = player2Number
-    let progressNumber2 = player2Number*2
+    let progressNumber2 = player2Number*5
     document.getElementById('p2Location').ariaValueNow = progressNumber2
     document.getElementById('p2Location').style.width = progressNumber2 + "%"  
 // button1 disable false
