@@ -51,7 +51,6 @@ function player1(){
         document.getElementById("p2Click").style.visibility="hidden"
         document.getElementById('restart').disabled = false
         document.getElementById('p1result').innerText = "play1 roll the dice and get "+randomNumber1+" Player1 is the winner"
-        alert("CONGRATULATIONS, PLAYER1 IS THE WINNER!!")
     }
 // and show the step
     document.getElementById('p1Location').innerText = player1Number
