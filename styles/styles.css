@@ -116,3 +116,8 @@ h4 {
 #p2result{
     color: #034977;
 }
+
+strong{
+    color: gold;
+    font-size: 2em;
+}

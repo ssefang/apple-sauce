@@ -33,7 +33,7 @@ function player1(){
     document.getElementById('restart').disabled = false
 //  random number
     randomNumber1 = Math.floor(Math.random()*6 + 1)
-    document.getElementById('p1result').innerText = "play1 roll the dice and get "+randomNumber1  
+    document.getElementById('p1result').innerText = "Tom roll the dice and get "+randomNumber1  
 // button1 disable false
     document.getElementById('p1Click').disabled = false
 // button2 disable true
@@ -44,13 +44,13 @@ function player1(){
 // play dice  (if == 100 or > 100)
     player1Number += randomNumber1    
     if(player1Number > 20){
-        document.getElementById('p1result').innerText = "play1 roll the dice and get "+randomNumber1+", play1's step is above 20 should go back "+Math.abs(20-player1Number)+" step"    
+        document.getElementById('p1result').innerText = "Tom roll the dice and get "+randomNumber1+", Tom's step is above 20 should go back "+Math.abs(20-player1Number)+" step"    
         player1Number = 40 - player1Number
     }else if (player1Number == 20){
         document.getElementById("p1Click").style.visibility="hidden"
         document.getElementById("p2Click").style.visibility="hidden"
         document.getElementById('restart').disabled = false
-        document.getElementById('p1result').innerText = "play1 roll the dice and get "+randomNumber1+",he got 20, Player1 is the winner"
+        document.getElementById('p1result').innerHTML = "Tom roll the dice and get "+randomNumber1+",he got 20, <strong>Tom is the WINNER</strong>"
     }
 // and show the step
     document.getElementById('p1Location').innerText = player1Number
@@ -69,11 +69,11 @@ function player2(){
     }else{
 // random number
         randomNumber2 = Math.floor(Math.random()*6 + 1)
-        document.getElementById('p2result').innerText = "play2 roll the dice and get "+randomNumber2
+        document.getElementById('p2result').innerText = "Jerry roll the dice and get "+randomNumber2
 // play dice
         player2Number += randomNumber2
         if (player2Number > 20){
-            document.getElementById('p2result').innerText = "play2 roll the dice and get "+randomNumber2+", play2's step is above 20 should go back "+Math.abs(20-player2Number)+" step" 
+            document.getElementById('p2result').innerText = "Jerry roll the dice and get "+randomNumber2+", Jerry's step is above 20 should go back "+Math.abs(20-player2Number)+" step" 
             player2Number = 40- player2Number
         }else if(player2Number == 20){
             // document.getElementById('p1Click').disabled = true
@@ -81,7 +81,7 @@ function player2(){
             document.getElementById("p1Click").style.visibility="hidden"
             document.getElementById("p2Click").style.visibility="hidden"
             document.getElementById('restart').disabled = false
-            document.getElementById('p2result').innerText = "play2 roll the dice and get "+randomNumber2+",he got 20, Player2 is the winner"
+            document.getElementById('p2result').innerHTML = "Jerry roll the dice and get "+randomNumber2+",he got 20, <strong>Jerry is the WINNER</strong>"
         }
 // and show the step
     document.getElementById('p2Location').innerText = player2Number
