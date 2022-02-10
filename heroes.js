@@ -14,6 +14,7 @@ $(document).ready(function(){
         $("header").append(superName).append(superHome)
         
         // 6. Create an article element and append the 5 previously create elements (step 3,4,5)
+        //7. Append the newly created article to the existing section in the html files
         for(item of obj.members){
             let newArticle = $("<article></article>")
             $("section").append(newArticle)    
@@ -42,14 +43,26 @@ $(document).ready(function(){
                 $(newUL).append(newItem)
             }
         }
-    
+        /*
+        8. Go back and alter your code so the ul element will slide down when you hover over the third paragraph ("Superpowers:") and slide up when you hover off.
+        */
+        
+        $("section article:nth-child(1) p:nth-child(4)").hover(function(){
+            $("section article:nth-child(1) ul:nth-child(5)").slideUp(1000)
+        }, function(){
+            $("section article:nth-child(1) ul:nth-child(5)").slideDown(1000)
+        })
+        $("section article:nth-child(2) p:nth-child(4)").hover(function(){
+            $("section article:nth-child(2) ul:nth-child(5)").slideUp(1000)
+        }, function(){
+            $("section article:nth-child(2) ul:nth-child(5)").slideDown(1000)
+        })
+        $("section article:nth-child(3) p:nth-child(4)").hover(function(){
+            $("section article:nth-child(3) ul:nth-child(5)").slideUp(1000)
+        }, function(){
+            $("section article:nth-child(3) ul:nth-child(5)").slideDown(1000)
+        })
     })
+    
  
 })
-
-/*
-
-7. Append the newly created article to the existing section in the html files
-8. Go back and alter your code so the ul element will slide down when you hover over the third paragraph ("Superpowers:") and slide up when you hover off.
-
-*/
