@@ -1,0 +1,32 @@
+
+All instructions should be preformed using jQuery whenever possible.
+
+
+a. Include the current verison on the jQuery library
+b. Wait for document to be ready to ensure all jQeury has been loaded in the page
+c. Once ready, create an AJAX request to the json file provided
+d. Upon success the callback function should preform the following tasks
+
+
+1. Create an h1 element, have its content be the *squadName* and append it to the existing header element
+2. Create a paragraph set its content as below and append it to the existing header element
+			Hometown: *homeTown* // Formed: *formed*
+
+3. Create an h2 element and have its content be the current hero's *name*.
+4. Create 3 seperate paragraphs elements have their content be:
+			Secret Identity: secretIdentity
+			Age: age
+			Superpowers:
+5. Create a ul element.
+6. Loop through the current hero's *superpowers* — for each one create an li element, put the *superpower* as its content, then put all the list items inside the ul element from step5
+
+6. Create an article element and append the 5 previously create elements (step 3,4,5)
+7. Append the newly created article to the existing section in the html files
+
+8. Go back and alter your code so the ul element will slide down when you hover over the third paragraph ("Superpowers:") and slide up when you hover off.
+
+
+
+
+
+Credit : https://github.com/mdn/learning-area/ 
