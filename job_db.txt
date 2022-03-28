@@ -1,0 +1,25 @@
+CREATE TABLE `job`.`user` ( `userid` INT(10) NOT NULL AUTO_INCREMENT , `username` VARCHAR(100) NOT NULL , `password` VARCHAR(100) NOT NULL , `name` VARCHAR(100) NOT NULL , `email` VARCHAR(100) NOT NULL , `tel` VARCHAR(100) NOT NULL , `education` VARCHAR(255) NOT NULL , `experience` VARCHAR(255) NOT NULL , PRIMARY KEY (`userid`)) ENGINE = InnoDB;
+
+
+CREATE TABLE `job`.`company` ( `compid` INT(10) NOT NULL AUTO_INCREMENT , `username` VARCHAR(100) NOT NULL , `password` VARCHAR(100) NOT NULL , `compname` VARCHAR(100) NOT NULL , `compemail` VARCHAR(100) NOT NULL , `comptel` VARCHAR(100) NOT NULL , `compaddr` VARCHAR(100) NOT NULL , PRIMARY KEY (`compid`)) ENGINE = InnoDB;
+
+CREATE TABLE `job`.`position` ( `posid` INT NOT NULL AUTO_INCREMENT , `compid` int(10) NOT NULL , `jobtitle` VARCHAR(100) NOT NULL , `requirment` VARCHAR(255) NOT NULL , `status` VARCHAR(100) NOT NULL , PRIMARY KEY (`posid`)) ENGINE = InnoDB;
+
+
+CREATE TABLE `job`.`application` ( `appid` INT(10) NOT NULL AUTO_INCREMENT , `userid` INT(10) NOT NULL , `posid` INT(10) NOT NULL , `appstat` VARCHAR(100) NOT NULL , PRIMARY KEY (`appid`)) ENGINE = InnoDB;
+
+
+
+
+INSERT INTO `company` (`compid`, `username`, `password`, `compname`, `compemail`, `comptel`, `compaddr`) VALUES 
+(NULL, 'microsoft', '123', 'Microsoft CO.,', 'hr@microsoft.com', '123456', 'Seattle'), 
+(NULL, 'ibm', 'ibm', 'IBM CO.,', 'hr@ibm.com', '854342212', 'new york')
+
+
+
+INSERT INTO `user` (`userid`, `username`, `password`, `name`, `email`, `tel`, `education`, `experience`) VALUES 
+(NULL, 'allen', 'passal', 'Allen Ahon', 'allen@hotmail.com', '664377231', 'Harvard University -- Computer Science', 'TA in school.'), (NULL, 'ben', 'passben', 'Ben Ballen', 'ben@gmail.com', '46581952', 'UC Berkeley', 'working in google for 2 years')
+
+INSERT INTO `application` (`appid`, `userid`, `posid`, `status`) VALUES 
+(NULL, '1', '1', 'apply'), 
+(NULL, '2', '1', 'apply');
