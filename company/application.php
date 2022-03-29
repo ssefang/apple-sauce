@@ -17,7 +17,7 @@ $array_result = InsertValue();
                 die("Failed! ". $conn->connect_error);
             }
            
-            $sql = "SELECT user.name,user.email,user.tel,user.education,user.experience, a.appstat FROM `application` a JOIN `user` ON user.userid= a.userid JOIN `position` ON position.posid=a.posid WHERE position.posid=$_GET[posid];";              
+            $sql = "SELECT a.appid,user.name,user.email,user.tel,user.education,user.experience, a.appstat FROM `application` a JOIN `user` ON user.userid= a.userid JOIN `position` ON position.posid=a.posid WHERE position.posid=$_GET[posid];";              
             $result = $conn->query($sql);
             if($result->num_rows >0){ 
                 $array_result = $result->fetch_all(MYSQLI_ASSOC);             
@@ -62,7 +62,7 @@ $array_result = InsertValue();
     <td><?php echo $value['education'];?></td>
     <td><?php echo $value['experience'];?></td>
     <td><?php echo $value['status'];?></td>
-    <td><a href="application.php?id=<?php echo $value['posid'];?>" >check</a></td>
+    <td><a href="check.php?appid=<?php echo $value['appid'];?>" >check</a></td>
   </tr>
  <?php
 }?>

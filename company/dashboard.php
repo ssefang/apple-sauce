@@ -68,7 +68,7 @@ $array_result = InsertValue();
     <td><?php echo $value['requirment'];?></td>
     <td><?php echo $value['salary'];?></td>
     <td><?php echo $value['status'];?></td>
-    <td><a href="update.php?posid=<?php echo $value['posid'];?>" >Update</a>|<a href="application.php?posid=<?php echo $value['posid'];?>" >View</a></td>
+    <td><a href="edit.php?posid=<?php echo $value['posid'];?>" >Update</a>|<a href="application.php?posid=<?php echo $value['posid'];?>" >View</a></td>
   </tr>
  <?php
 }?>
