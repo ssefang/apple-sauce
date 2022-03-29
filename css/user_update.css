@@ -1,0 +1,47 @@
+.error-msg{
+    margin-top : 4px;
+    color: red;
+    font-weight: bold;
+  }
+
+.success{
+    background: #3053b1;
+    padding: 19px;
+    TEXT-ALIGN: CENTER;
+    FONT-SIZE: 16PX;
+    FONT-WEIGHT: BOLD;
+    color: red;
+    FONT-FAMILY: CURSIVE;
+}
+
+.send{
+
+    background: #3053b1;
+    width: 100%;
+    TEXT-ALIGN: CENTER;
+    FONT-SIZE: 30pX;
+    FONT-WEIGHT: BOLD;
+    color: white;
+}
+
+.login{
+    
+    background: yellowgreen;
+    width: 100%;
+    TEXT-ALIGN: CENTER;
+    FONT-SIZE: 30pX;
+    FONT-WEIGHT: BOLD;
+    color: white;
+}
+
+h3{
+    background: #3053b1;
+    width: 100%;
+    padding: 15px;
+    TEXT-ALIGN: CENTER;
+    FONT-SIZE: 30PX;
+    FONT-WEIGHT: BOLD;
+    color: white;
+}
+
+
