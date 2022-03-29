@@ -103,7 +103,7 @@ function InsertValue(){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact us</title>
+    <title>Company Login</title>
   <link rel="stylesheet" href="index.css">
 </head>
 <body>
@@ -123,7 +123,7 @@ function InsertValue(){
                 
               
 
-                <input type="submit" class="submit" value="Send Message">
+                <input type="submit" class="submit" value="Login">
             </form>
         </div>
         <div class="col-6"></div>

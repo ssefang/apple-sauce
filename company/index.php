@@ -151,7 +151,7 @@ if ($result->num_rows > 0) {
                 <label for="address">Company Address<span class = "error-msg" >*<span></label>
                 <input type="text" class ="input-div-nn" id="address" name = "address" value="<?php echo $address;?>">
                 <p class = "error-msg"><?php echo $addressErr; ?></p>
-            
+                <a href="login.php" class="href">Login</a>
 
                 <input type="submit" class="submit" value="Register">
             </form>

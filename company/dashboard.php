@@ -14,7 +14,7 @@ $array_result = InsertValue();
             if($conn ->connect_error){
                 die("Failed! ". $conn->connect_error);
             }
-            $sql = "SELECT compid, username,compname,compemail,comptel,compaddr FROM `company`";              
+            $sql = "SELECT position.posid,position.compid,company.compname, position.jobtitle, position.requirment, position.salary, position.status FROM `position` JOIN `company` ON position.compid=company.compid WHERE company.username='$_SESSION[name]';";              
             $result = $conn->query($sql);
             if($result->num_rows >0){ 
                 $array_result = $result->fetch_all(MYSQLI_ASSOC); 
@@ -40,12 +40,13 @@ $array_result = InsertValue();
     
 <table id="customers">
   <tr>
-  <th>Id</th>
-    <th>username</th>
+    <th>posid</th>
+    <th>compid</th>
     <th>compname</th>
-    <th>compemail</th>
-    <th>comptel</th>
-    <th>compaddr</th>
+    <th>jobtitle</th>
+    <th>requirment</th>
+    <th>salary</th>
+    <th>status</th>
     <th>Action</th>
   </tr>
  <?php 
@@ -54,18 +55,19 @@ $array_result = InsertValue();
  foreach($array_result as $value){?>
   
   <tr>
+    <td><?php echo $value['posid'];?></td>
     <td><?php echo $value['compid'];?></td>
-    <td><?php echo $value['username'];?></td>
     <td><?php echo $value['compname'];?></td>
-    <td><?php echo $value['compemail'];?></td>
-    <td><?php echo $value['comptel'];?></td>
-    <td><?php echo $value['compaddr'];?></td>
-    <td><a href="delete.php?id=<?php echo $value['id'];?>" >Delete</a></td>
+    <td><?php echo $value['jobtitle'];?></td>
+    <td><?php echo $value['requirment'];?></td>
+    <td><?php echo $value['salary'];?></td>
+    <td><?php echo $value['status'];?></td>
+    <td><a href="update.php?posid=<?php echo $value['posid'];?>" >Update</a>|<a href="update.php?id=<?php echo $value['posid'];?>" >View</a></td>
   </tr>
  <?php
 }?>
  
 </table>
-
+<a href="position.php?compid=<?php  echo $value['compid'];?>" >Post a new position</a>
 </body>
 </html>
