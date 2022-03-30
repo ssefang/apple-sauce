@@ -46,7 +46,7 @@ if(isset($_POST)&&!empty($_POST)){
 
 if(isset($error_log['success']) && !empty($error_log['success'])){
     InsertValue();
-    //$username = $password = $name= $email = $tel = $education = $experience ='';
+    $username = $password = $name= $email = $tel = $education = $experience ='';
 
 }
 

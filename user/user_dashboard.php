@@ -17,11 +17,11 @@ function CheckPost(){
     $result = $conn->query($sql);
     if($result->num_rows > 0){
         $array_result = $result->fetch_all(MYSQLI_ASSOC); 
+        return $array_result;
     }else{
         echo $conn->connect_error;
     }
     $conn->close();
-    return $array_result;
 }
    
 ?>

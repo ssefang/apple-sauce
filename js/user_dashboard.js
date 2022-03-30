@@ -38,12 +38,19 @@ $(document).ready(function() {
                 data: form.serialize(),
                 success: function (result) {
                     console.log(result);
-                    alert('You have update your file.');
-                }
+                    if (result == 'success') {
+                        document.getElementById('info').innerHTML = '<h3>You have updated your file.</h3>';
+                    } else {
+                        document.getElementById('info').innerHTML = '<h3>'+result+'</h3>';
+                    }
+                    
+                },
             });
         }
 
     });
+
+
 
     // //search bar
     // $('.submit-search-btn').click(function(e){
@@ -62,49 +69,6 @@ $(document).ready(function() {
     //             });
     //     });
 
-
-    // //全选按钮 
-    // $(".checkall").change(function(){
-    //     $(".select-delete-nn").prop("checked",$(this).prop("checked"));
-    // });    
-
-    //  //所有小按钮选完自动勾选checkall 按钮
-
-    // $(".select-delete-nn").change(function(){
-    //     if($(".select-delete-nn:checked").length === $(".select-delete-nn").length){
-    //         $(".checkall").prop("checked",true);
-    //     }else{
-    //         $(".checkall").prop("checked",false);
-    //     }
-    // });
-
-
-
-    
-    // //删除多行
-    // $('.delete-all').click(function(e){
-    //     e.preventDefault;
-    //     var delete_rows = []; 
-    //     $('.select-delete-nn:checked').each(function(i){
-    //         delete_rows[i] = $(this).data('id');
-    //     })
-    //     console.log(delete_rows);
-    //     if(delete_rows.length === 0){
-    //         alert("At least chose one.");
-    //     }else{
-    //         $.ajax({
-    //             type: "POST", 
-    //             url: 'deleterows.php', 
-    //             data: {id:delete_rows}, 
-    //             success: function (res) {
-    //                 for(var i=0; i<delete_rows.length;i++){
-    //                     $('#customers').html(''); 
-    //                     $('#customers').html(res);
-    //                 }
-    //             }
-    //         });
-    //     }
-    // })
 
 
 

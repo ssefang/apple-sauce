@@ -6,7 +6,7 @@ if(!empty($array_result)) {?>
     <thead>
         <th  scope="col" width = "15%">Company</th>
         <th  scope="col" width = "15%" >Position</th>
-        <th  scope="col" style="text-align: center;" width = "45%">Requirment</th>
+        <th  scope="col" style="text-align: center;" width = "45%">Requirement</th>
         <th  scope="col" width = "15%">Salary</th>
         <th  scope="col" width = "10%">Status</th>
     </thead>
@@ -24,7 +24,6 @@ if(!empty($array_result)) {?>
 
 <?php } 
 }
-
 
 else{ ?>
     <p>NO RECORD FOUND</p>

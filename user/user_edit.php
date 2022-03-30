@@ -1,4 +1,5 @@
 <?php
+error_reporting(0); 
 
 include '../db/database.php';
 include "decryption.php";
@@ -8,6 +9,7 @@ $userid = $_SESSION['userid'];
 $username = $_SESSION['username'];
 
 
+$err= $_GET['err'];
 
 
 $error_log['password']= $error_log['name'] = $error_log['email'] = $error_log['tel'] = $error_log['success']='';
@@ -16,7 +18,7 @@ $password = $name= $email = $tel = $success = $education = $experience = $encryp
 if (!empty($err) && isset($err)){
   $error_log = unserialize($err);
 }
-
+ 
 
 $sql = "select * from user where userid = '$userid'";  
 $result = $conn->query($sql);
@@ -61,7 +63,8 @@ if($result->num_rows==1 ){
     <main class = "container">
 		
         <h3>Edit Center</h3>
-        <h3><?php echo $error_log['success'];?></h3>
+        <div id="info"><h3></h3></div>
+
 
         <!--must use $row['userid'] -->
         <form action="<?php echo'user_update.php?userid='.$row['userid'] ?>" method="post" id="updateform">
