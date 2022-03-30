@@ -1,5 +1,5 @@
 <?php 
-
+error_reporting(0);
 session_start();
 echo "Welcome ".$_SESSION['name'];
 $array_result = InsertValue();
@@ -17,11 +17,17 @@ $array_result = InsertValue();
             $sql = "SELECT position.posid,position.compid,company.compname, position.jobtitle, position.requirment, position.salary, position.status FROM `position` JOIN `company` ON position.compid=company.compid WHERE company.username='$_SESSION[name]';";              
             $result = $conn->query($sql);
             if($result->num_rows >0){ 
-                $array_result = $result->fetch_all(MYSQLI_ASSOC); 
-             
+                $array_result = $result->fetch_all(MYSQLI_ASSOC);             
              }
             else{
+                // echo "error".$conn->connect_error;
+                $sql="SELECT compid,compname FROM `company` WHERE username='$_SESSION[name]';";
+                $result = $conn->query($sql);
+                if($result->num_rows >0){ 
+                $array_result = $result->fetch_all(MYSQLI_ASSOC);             
+             }else{
                 echo "error".$conn->connect_error;
+             }
                 }
                 $conn->close();
                 return $array_result;
@@ -62,7 +68,7 @@ $array_result = InsertValue();
     <td><?php echo $value['requirment'];?></td>
     <td><?php echo $value['salary'];?></td>
     <td><?php echo $value['status'];?></td>
-    <td><a href="update.php?posid=<?php echo $value['posid'];?>" >Update</a>|<a href="update.php?id=<?php echo $value['posid'];?>" >View</a></td>
+    <td><a href="edit.php?posid=<?php echo $value['posid'];?>" >Update</a>|<a href="application.php?posid=<?php echo $value['posid'];?>" >View</a></td>
   </tr>
  <?php
 }?>

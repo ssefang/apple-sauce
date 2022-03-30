@@ -2,14 +2,14 @@
 
 session_start();
 
-$id = $_GET['posid'];
+$id = $_GET['appid'];
 echo $id;
 
-$compid = $_GET["compid"];
-$jobtitle = $_GET["jobtitle"];
-$requirment = $_GET["requirment"];
-$salary = $_GET["salary"];
-$status = $_GET["status"];
+// $compid = $_GET["compid"];
+// $jobtitle = $_GET["jobtitle"];
+// $requirment = $_GET["requirment"];
+// $salary = $_GET["salary"];
+$appstat = $_GET["appstat"];
 
     $servername = "localhost";
     $username = "root";
@@ -21,7 +21,7 @@ $status = $_GET["status"];
         die("Failed! ". $conn->connect_error);
     }
     
-    $sql = "UPDATE `position` SET `compid` = '$compid', `jobtitle` = '$jobtitle', `requirment` = '$requirment',`salary` = '$salary', `status`='$status' WHERE `position`.`posid` = $id;";
+    $sql = "UPDATE `application` SET `appstat` = '$appstat' WHERE `application`.`appid` = $id;";
    
 
     if($conn->query($sql) === true){

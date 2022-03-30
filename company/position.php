@@ -2,8 +2,8 @@
 
 error_reporting(0);
 
-$jobtitleErr = $requirmentErr = $salaryErr = $statusErr  = "";
-$jobtitle = $requirment = $salary = $status  ="";
+$jobtitleErr = $requirmentErr = $salaryErr =  "";
+$jobtitle = $requirment = $salary ="";
 $_POST['sucess'] = "";
     
     if($_SERVER["REQUEST_METHOD"]=="POST"){
@@ -31,11 +31,7 @@ $_POST['sucess'] = "";
                 $salaryErr = "Only letters and numbers allowed";
             }    
         }
-        if(empty($_POST['status'])){          
-            $statusErr = 'Please enter your status(active or freeze)';
-        }else{
-            $status=$_POST["status"];
-        }
+ 
         
 }
 
@@ -48,10 +44,10 @@ function test_input($data) {
   }
 
 
-if($jobtitle!='' && $requirment!=''&& $salary!=''&& $status!=''){
+if($jobtitle!='' && $requirment!=''&& $salary!=''){
     $_POST['sucess'] = '<p class="success">Post Success</p>';
     InsertValue();
-    $jobtitle = $requirment=$salary=$status = "";
+    $jobtitle = $requirment=$salary= "";
 }
 
 function InsertValue(){
@@ -60,16 +56,6 @@ function InsertValue(){
         $password = ""; 
         $dbname = "job";
         $conn = new mysqli($servername, $username, $password, $dbname);
-       
-$sql = "SELECT * FROM position where jobtitle='$_POST[jobtitle]'";
-$result = $conn->query($sql);
-
-if ($result->num_rows > 0) {
-  global $jobtitleErr;
-  global $cid;
-  $jobtitleErr="jobtitle has already exist";
-  $_POST['sucess'] = '<p class="success">jobtitle has already exist</p>';
-  }else {
 
                 $sql = "INSERT INTO `position`(`compid`, `jobtitle`, `requirment`, `salary`, `status`) VALUES ('$_POST[compid]', 
                 '$_POST[jobtitle]','$_POST[requirment]','$_POST[salary]','$_POST[status]')";
@@ -82,7 +68,7 @@ if ($result->num_rows > 0) {
                     echo "error".$conn->connect_error;   
                     }
                     $conn->close();
-        }
+     
 }
 
 ?>
@@ -120,9 +106,13 @@ if ($result->num_rows > 0) {
                 <p class = "error-msg"><?php echo $salaryErr; ?></p>
 
                 <label for="status">status<span class = "error-msg" >*</label>
-                <input type="status" class ="input-div-nn" id="status" name="status" value="<?php echo $status;?>" >
+                <!-- <input type="status" class ="input-div-nn" id="status" name="status" value="<?php echo $status;?>" >
+                <p class = "error-msg"><?php echo $statusErr; ?></p> -->
+                <select class ="input-div-nn" name="status" id="status">
+                    <option value= "active" selected >active</option>
+                    <option value= "freeze">freeze</option>
+                </select>
                 <p class = "error-msg"><?php echo $statusErr; ?></p>
-
 
                 <input type="submit" class="submit" value="Post">
             </form>
